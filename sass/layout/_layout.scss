@@ -1,0 +1,28 @@
+.container {
+    max-width: 120rem; //Setting the width to max-width so it can decrease if there's no more space
+    margin: 8rem auto; //Centering the container inside its parent element which is the body
+    background-color: var(--color-grey-light-1); //Setting the color
+    box-shadow: var(--shadow-dark);
+
+    min-height: 80rem;  //temporary
+
+    .header {
+        height: 7rem;                           
+        background-color: var(--color-white);
+        border-bottom: var(--color-grey-light-2);
+    }
+    .content {
+        display:flex;   //To set sidebar and hotelview side by side, we're gonna use flex
+    
+        .sidebar {
+            flex: 0 0 18%; //flex-grow flex-shrink flex-basis => Basically we are saying, we don't want it to grow or shrink, just                   always 18%
+            background-color: var(--color-grey-dark-1);
+        }
+        .hotel-view {
+            background-color: var(--color-grey-light-4);
+    
+            flex: 1; //We want it to grow as much as it can, automatically
+        }
+    }
+}
+
