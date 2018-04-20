@@ -1,0 +1,127 @@
+// LOGO //    
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+// SEARCH BOX //
+.search {
+    flex: 0 0 40%; //flex-grow flex-shrink how much space you want it to occupy
+
+    display: flex;
+    align-items: center;        //Centers element on the cross axis
+    justify-content: center;    //Centers element on the main axis
+
+    &__input {
+        // FONT //
+        // because input doesn't inherit global fonts
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+
+        //Styling the box
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 10rem;
+        width: 90%; //so that when it is focus, it expands to a 100%
+        margin-right: -3.25rem; //so that the button will be on top and the slider will move
+
+        //Animation
+        transition: all .2s;
+
+        //When clicked
+        &:focus {
+            outline: none;  //No blue around
+            width: 100%;    //expanding
+            background-color: var(--color-grey-light-3);
+        }
+
+        //To change style on the placeholder:
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    //To make the button the same background when clicked
+    &__input:focus ~ &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus {
+            outline: none;  //No blue around
+        }
+
+        &:active {
+            transform: translateY(2px); //For the button to move down when clicked
+        }
+    }
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+
+        // COLOR:  to change svg color, you can use fill
+        fill: var(--color-grey-dark-3);
+    }
+}
+
+// USER NAV //
+.user-nav {
+    align-self: stretch; //This overrides the header align-items, so when you hover
+
+    display: flex;
+    align-items: center;
+
+    //This will have some on each of all the child items
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;   //For the items to have a height
+
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__icon-box {
+        position: relative;
+
+    }
+    &__icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: var(--color-grey-dark-2);
+    }
+    &__notification {
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__user-photo {
+        height: 3.75rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+}
+
+
+
