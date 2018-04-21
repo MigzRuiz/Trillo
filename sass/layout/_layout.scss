@@ -23,11 +23,16 @@
         .sidebar {
             flex: 0 0 18%; //flex-grow flex-shrink flex-basis => Basically we are saying, we don't want it to grow or shrink, just                   always 18%
             background-color: var(--color-grey-dark-1);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .hotel-view {
             background-color: var(--color-grey-light-4);
     
             flex: 1; //We want it to grow as much as it can, automatically
+            height:80rem;
         }
     }
 }
