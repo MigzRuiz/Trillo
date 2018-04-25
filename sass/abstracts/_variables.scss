@@ -17,6 +17,9 @@
     --color-black: #000;
     --color-white: #fff;
 
+    --line: 1px solid var(--color-grey-light-2);
+
     // TEMPLATES //
     --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);//X-Axis Y-Axis Blur (Color, opacity)
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
 }
